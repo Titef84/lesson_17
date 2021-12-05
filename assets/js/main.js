@@ -97,4 +97,32 @@ console.log(car2.info());
 car.used = 'used';
 console.log(car2.info());
 
-let list
+let list = [12, 23, 100, 34, 56, 9, 233];
+let myMax = (arg) => Math.max.apply(Math,arg);
+console.log(myMax(list));
+
+function myMul(a, b){
+  return a * b;
+};
+
+let myDouble = myMul.bind(null, 2);
+console.log(myDouble(3));
+console.log(myDouble(4));
+console.log(myDouble(5));
+
+let myTriple = myMul.bind(null, 3);
+console.log(myTriple(3));
+console.log(myTriple(4));
+console.log(myTriple(5));
+
+let notUniqNums = [1, 1, 2, 3, 4, 5, 6, 7];
+let notUniqStrings = ['Bob', 'Kate', 'Jhon', 'Tom', 'Jhon', 'Kate', 'Tom', 'Bob', 'Jhon', 'Tom'];
+let myUniq = (arr) => {
+  let set = new Set();
+  arr.forEach((val) =>{
+    set.add(val);
+  });
+  return set;
+};
+console.log(myUniq(notUniqNums));
+console.log(myUniq(notUniqStrings));
