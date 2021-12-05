@@ -44,7 +44,7 @@ console.log(counting.value(200));
 counting.increment();
 console.log(counting.value());
 
-let myPrint = (a, b, res) => `${a}^${b}=${res}`;
+var myPrint = (a, b, res) => `${a}^${b}=${res}`;
 function myPow (a, b, callback) {
   function pow (x, n) {
     if (n !== 1) return x *= pow(x,n - 1);
@@ -58,8 +58,8 @@ console.log(myPow(2, 3, myPrint));
 function info () {
   return `${this.name} ${this.model}, ${this.engine}cc, year ${this.year}, ${this.used}`;
 };
-let yearNow = new Date().getFullYear();
-let car = {
+var yearNow = new Date().getFullYear();
+var car = {
   engine: 2000,
   model: 'Lacetti',
   name: 'Chevrolet',
@@ -74,7 +74,7 @@ set used(value) {
 }
 };
 
-let car2 = {
+var car2 = {
   engine: 5000,
   model: 'FX50 AWD',
   name: 'Infinite',
@@ -97,28 +97,28 @@ console.log(car2.info());
 car.used = 'used';
 console.log(car2.info());
 
-let list = [12, 23, 100, 34, 56, 9, 233];
-let myMax = (arg) => Math.max.apply(Math,arg);
+var list = [12, 23, 100, 34, 56, 9, 233];
+var myMax = (arg) => Math.max.apply(Math,arg);
 console.log(myMax(list));
 
 function myMul(a, b){
   return a * b;
 };
 
-let myDouble = myMul.bind(null, 2);
+var myDouble = myMul.bind(null, 2);
 console.log(myDouble(3));
 console.log(myDouble(4));
 console.log(myDouble(5));
 
-let myTriple = myMul.bind(null, 3);
+var myTriple = myMul.bind(null, 3);
 console.log(myTriple(3));
 console.log(myTriple(4));
 console.log(myTriple(5));
 
-let notUniqNums = [1, 1, 2, 3, 4, 5, 6, 7];
-let notUniqStrings = ['Bob', 'Kate', 'Jhon', 'Tom', 'Jhon', 'Kate', 'Tom', 'Bob', 'Jhon', 'Tom'];
-let myUniq = (arr) => {
-  let set = new Set();
+var notUniqNums = [1, 1, 2, 3, 4, 5, 6, 7];
+var notUniqStrings = ['Bob', 'Kate', 'Jhon', 'Tom', 'Jhon', 'Kate', 'Tom', 'Bob', 'Jhon', 'Tom'];
+var myUniq = (arr) => {
+  var set = new Set();
   arr.forEach((val) =>{
     set.add(val);
   });
